@@ -1,7 +1,7 @@
 import gradio as gr
-import skops.io as sio
+from skops.io import load, get_untrusted_types
 
-pipe = sio.load("Model/drug_pipeline.skops", trusted=True)
+pipe = load("Model/drug_pipeline.skops", trusted=get_untrusted_types())
 
 def predict_drug(age, sex, bp, chol, na_k):
     return f"Predicted Drug: {pipe.predict([[age, sex, bp, chol, na_k]])[0]}"
