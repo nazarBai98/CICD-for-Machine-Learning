@@ -27,8 +27,8 @@ hf-login:
 	huggingface-cli login --token $(HF) --add-to-git-credential
 
 push-hub:
-	huggingface-cli upload YOUR_USERNAME/Drug-Classification ./App --repo-type=space
-	huggingface-cli upload YOUR_USERNAME/Drug-Classification ./Model /Model --repo-type=space
-	huggingface-cli upload YOUR_USERNAME/Drug-Classification ./Results /Metrics --repo-type=space
+	huggingface-cli upload NazarBai/Drug-Classification ./App --repo-type=space
+	huggingface-cli upload NazarBai/Drug-Classification ./Model /Model --repo-type=space
+	huggingface-cli upload NazarBai/Drug-Classification ./Results /Metrics --repo-type=space
 
 deploy: hf-login push-hub
