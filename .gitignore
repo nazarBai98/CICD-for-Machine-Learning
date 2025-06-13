@@ -25,10 +25,9 @@ Thumbs.db
 # Hugging Face cache
 ~/.cache/huggingface/
 
-# Model and result files (optional – remove these if you want to track them)
-Model/*.skops
+# Model and result files
 Results/*.png
 Results/*.txt
 
-# CML report artifacts (optional – they are posted as comments, so not always needed)
+# CML report artifacts
 report.md
