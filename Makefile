@@ -21,10 +21,12 @@ update-branch:
 	git push --force origin HEAD:update
 
 hf-login:
+	git config pull.rebase false
 	git pull origin update
 	git switch update
 	pip install -U "huggingface_hub[cli]"
 	huggingface-cli login --token $(HF) --add-to-git-credential
+
 
 push-hub:
 	huggingface-cli upload NazarBai/Drug-Classification ./App --repo-type=space
