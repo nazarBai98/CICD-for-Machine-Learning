@@ -1,7 +1,7 @@
 import gradio as gr
 from skops.io import load, get_untrusted_types
 
-trusted_types = get_untrusted_types()
+trusted_types = get_untrusted_types(file="Model/drug_pipeline.skops")
 pipe = load(file="Model/drug_pipeline.skops", trusted=trusted_types)
 
 def predict_drug(age, sex, bp, chol, na_k):
